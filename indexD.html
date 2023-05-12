@@ -166,7 +166,7 @@
          }
 
          function afterLoaded() {
-             say("This ran when the page loaded.");
+             say("Welcome to this Reverse Polish Notation Calculator.");
              // TODO put inital run scripts in here.
 
              return true;
@@ -217,17 +217,18 @@
          .echoBox {
              grid-area: echo;
              min-height: 1rem;
-             background-color: #e8f1fc;
+             background-color: #20030f;
              border: 2px solid #082041;
+             color: #bdbdbd;
              border-radius: 1rem;
              padding: 0 1rem;
          }
          .echoBox h3 {
-             background-color: #e8f1fc;
+             background-color: #1a0b11;
              color:  #082041;
          }
          #echoMe {
-             background-color: #fefcfa;
+             background-color: #2e1421;
              padding: 0.5rem;
              margin-left: 1rem;
              min-height: 1rem;
@@ -239,12 +240,12 @@
              min-height: 2rem;
              border: 2px solid #2f1d06;
              border-radius: 1rem;
-             background-color: #fefcfa;
+             background-color: #130a01;
              padding: 1rem;
          }
          .showLog h3 {
-             background-color: #fefcfa;
-             color: #1e1304;
+             background-color: #20180f;
+             color: #b6b6b6;
          }
          #showResp{
              margin-top: 1rem;
@@ -255,18 +256,18 @@
              margin: 0;
          }
          .logInput {
-             color: #3c3c3c;
+             color: #c76b6b;
          }
          .logOutput {
              color: #0073d3;
          }
          p.logOutput:before {
              content: "< ";
-             color: #a8a8a8;
+             color: #313131;
          }
          p.logInput::before {
              content: ">> ";
-             color: #a8a8a8;
+             color: #333333;
          }
          #showResp p.logInput:nth-last-child(2),
          #showResp p.logInput:nth-last-child(1) {
@@ -286,30 +287,35 @@
          /* input space */
          .inputBox {
              grid-area: input;
-             border: 2px solid #041e13;
-             background-color: #fafefc;
+             border: 2px solid #000000;
+             background-color: #00140a;
              min-height: 2.3rem;
          }
          .inputBox h3 {
-             background-color: #fafefc;
-             color: #041e13;
+             background-color: #0f2018;
+             color: #d8d8d8;
          }
          input {
              box-sizing: border-box;
+             background-color: #1d3329;
+             color: #b8b8b8;
              min-width: 25rem;
              padding: 0.75rem 1.5rem;
              border-radius: 0.25rem;
              font-size: 1.1rem;
          }
          input:focus, input:focus-visible {
-             border-color: #0c633e;
+             border-color: #000000;
+             background-color: #1d3329;
+             color: #cfcfcf;
          }
 
          /* output box */
          .outputBox {
              grid-area: output;
              align-self: start;
-             background-color: #fafcfe;
+             background-color: #001120;
+             color: #cfd0d1;
              border: 2px solid #040f1e;
              min-height: 1.8rem;
 
@@ -317,8 +323,8 @@
 
          }
          .outputBox h3 {
-             background-color: #fafcfe;
-             color: #040f1e;
+             background-color: #0a1a29;
+             color: #e2e2e2;
          }
          .clearOutput {
              display:flex;
@@ -337,6 +343,8 @@
          .button {
              border-radius: 0.5rem;
              border: none;
+             color: #afafaf;
+             background-color: #222425;
          }
          .button:hover {
              border-right: 1px gray solid;
@@ -355,6 +363,9 @@
          .clearOutBtn:hover{
              color: #cc2222;
          }
+         body {
+            background-color: #252524;
+         }
         </style>
     </head>
 
@@ -366,6 +377,9 @@
             your experience.
             </p>
         <![endif]-->
+        <form>
+            <button style="color: #3a2e2e; background-color: #cec6b4; border-radius: 1rem; margin-left: 1%;" formaction="indexL.html">Light Mode</button>
+          </form>
         <div class="box ioBox inputBox">
             <h3>Input:</h3>
             <!-- form to add data -->
@@ -396,7 +410,9 @@
         <div class="showLog box">
             <h3>Log</h3>
             <button class="button" onclick="viewController.clearLog()" style="float:right;">Clear</button>
-            <div id="showResp"></div>
+            <div id="showResp">
+
+            </div>
         </div>
     </body>
 </html>
