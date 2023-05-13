@@ -12,4 +12,5 @@ For this their is a few instructions on how to make the calculator work as inten
 Apart from these rules their isn't much else. if you break anything else please add it so i can eventually get to fixing it.
 
 ## Most recent Update:
-- Added a dark mode to aid the eyes
+- Added instructions within the websites. 
+- Added a dark mode to aid the eyes.

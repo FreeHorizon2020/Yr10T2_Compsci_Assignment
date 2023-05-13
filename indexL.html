@@ -107,9 +107,15 @@
              // output method -- to the Output box, and console
              console.log(myString);
              viewController.setOutput(myString);
-            
          }
 
+         function log(myString) {
+            viewController.log(viewController.IN, myString);
+         }
+
+         function logOutput(myString) {
+            viewController.log(viewController.OUT, myString);
+         }
  
          function yours(userInput) {
              // this is called when there is input.
@@ -126,7 +132,7 @@
         for (let m=0; m < test.length; m++){
             if (/[a-zA-Z]+/.test(test[m])){
                 // tests test array for words or letters throughout the entire array, if they are found it will tell the user.
-                say("No Words!");
+                logOutput("No Words!");
             
 
         } else {
@@ -154,10 +160,10 @@
                 console.log(formula);
                 console.log(result);
                 console.log(test);
-                say(userInput + " = "+ result); 
+                logOutput(userInput + " = "+ result); 
             } else {
                 console.log("No RPN");
-                say("that isn't RPN! RPN looks like this: 5 5 + 5 * = 30"); 
+                logOutput("that isn't RPN! RPN looks like this: 5 5 + 5 * = 30"); 
                 // if the order isn't right for RPN then output this message
             }
         }
@@ -167,6 +173,20 @@
 
          function afterLoaded() {
              say("Welcome to this Reverse Polish Notation Calculator.");
+             logOutput("Below is a multitude of things that need to be considered to ensure that the calculator remains functional:");
+             log("");
+             log("How to use this calculator:");
+             log(" - this calculator can only take the 4 basic operators, these are -, +, /, *. anything else will be counted as a letter.");
+             log(" - It will not accept letters and will return an error message");
+             log(" - The correct format to enter an equation is something like 5 5 + or 5 5 * 5 +. Not 5 + 5, this will give you an error message.");
+             log(""); 
+             log("Some errors will break the calculator and cause it to stop functioning are:");
+             log(" - Division by 0, will give you either infinity or NaN.");
+             log(" - if to many spaces are inserted it will break the Calculator.");
+             log(" - negative numbers will also break the calculator.");
+             log(" - their is a number limit on the size of the number that can be inserted.");
+
+
              // TODO put inital run scripts in here.
 
              return true;
