@@ -129,6 +129,11 @@
         // sets up regex which using the pattern provided (/\d+) will search through an entire string (/g) instead of the first characters reference list 3,4,8,11 
         const test = userInput.split(" ");
         // array from userinput to test if their are words etc.
+        if (test.join(' ').length > 200){
+            logOutput("This is too long, and will crash the calculator.")
+        } else {
+
+        
         for (let m=0; m < test.length; m++){
             if (/[a-zA-Z]+/.test(test[m])){
                 // tests test array for words or letters throughout the entire array, if they are found it will tell the user.
@@ -167,6 +172,7 @@
                 // if the order isn't right for RPN then output this message
             }
         }
+    }
 
     }
          }
