@@ -11,7 +11,7 @@ For this their is a few instructions on how to make the calculator work as inten
 5. keep the amount of spaces to 1 or 2 between numbers, otherwise it will asume one as a operator and break the calcualtor.
 
 Apart from these rules their isn't much else. if you break anything else please add it so i can eventually get to fixing it.
-testing to attempt from different computers.
+testing to attempt from different computers. 
 
 ## Most recent Update:
 - added a charachter limit to stop infinity.
