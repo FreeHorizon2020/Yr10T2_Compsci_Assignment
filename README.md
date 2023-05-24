@@ -14,6 +14,7 @@ Apart from these rules their isn't much else. if you break anything else please 
 testing to attempt from different computers. 
 
 ## Most recent Update:
+- fixed output in light mode.
 - added a charachter limit to stop infinity.
 - Added instructions within the websites. 
 - Added a dark mode to aid the eyes.
