@@ -130,14 +130,14 @@
         const test = userInput.split(" ");
         // array from userinput to test if their are words etc.
         if (test.join(' ').length > 200){
-            logOutput("This is too long, and will crash the calculator.")
+            say("This is too long, and will crash the calculator.")
         } else {
 
         
         for (let m=0; m < test.length; m++){
             if (/[a-zA-Z]+/.test(test[m])){
                 // tests test array for words or letters throughout the entire array, if they are found it will tell the user.
-                logOutput("No Words!");
+                say("No Words!");
             
 
         } else {
@@ -165,10 +165,10 @@
                 console.log(formula);
                 console.log(result);
                 console.log(test);
-                logOutput(userInput + " = "+ result); 
+                say(userInput + " = "+ result); 
             } else {
                 console.log("No RPN");
-                logOutput("that isn't RPN! RPN looks like this: 5 5 + 5 * = 30"); 
+                say("that isn't RPN! RPN looks like this: 5 5 + 5 * = 30"); 
                 // if the order isn't right for RPN then output this message
             }
         }
